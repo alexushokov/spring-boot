@@ -14,7 +14,7 @@ RUN gradle resolveDependencies --no-daemon
 COPY . .
 
 # Build the application
-RUN gradle build --no-daemon
+RUN ./gradlew build
 
 # Use a separate stage for the final image
 FROM openjdk:17-jdk-slim
